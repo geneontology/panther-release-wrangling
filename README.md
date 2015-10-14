@@ -27,8 +27,10 @@ wget -q -S -N -r -nH -np --cut-dirs=2 -A attr.tab,tree.tree,tree.mia,cluster.wts
 
 ## 2. Talk to Huaiyu
 
+### 2.a Relocate annotated PTNs
 Need to know what's changed from the PANTHER side. Huaiyu will send two spreadsheets. 
 First: is the list of PTNids that have changed families. These need to be a) moved from the GAF file in the old family to the GAF file in the new family, and 2) the updated GAFs have to be updated in the SVN repository
 
+### 2.b Deleted families
 Second: is the list of families that are no longer in PANTHER. These need to be moved from the primary paint GAF directory in SVN to the "retired" subdirectory in SVN.
 
