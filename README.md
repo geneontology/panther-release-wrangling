@@ -26,12 +26,18 @@ wget -q -S -N -r -nH -np --cut-dirs=2 -A attr.tab,tree.tree,tree.mia,cluster.wts
 ```
 
 ## 2. Talk to Huaiyu
-Need to know what's changed from the PANTHER side. Huaiyu will send two spreadsheets. 
+Need to know what's changed from the PANTHER side. 
 
-### 2.a Relocate annotated PTNs
+### 2.a Huaiyu is responsible for fixing all annotated ancestral node migration issues, specifically:
+#### Annotated nodes that disappear completely
+#### Annotated nodes that move to different tree (annotated already)
+#### Annotated nodes that move to different tree (with no extant annotations)
+#### Annotated nodes that move within trees and lose the original experimental annotations that were used as 'evidence'
+
+### 2.b Relocate annotated PTNs
 First: is the list of PTNids that have changed families. These need to be a) moved from the GAF file in the old family to the GAF file in the new family, and 2) the updated GAFs have to be updated in the SVN repository. See liftover code for the java app that does reads and writes the revised GAFs. The excel spreadsheet has to be slightly modified as text to be readable. 
 
-### 2.b Deleted families
+### 2.c Deleted families
 Second: is the list of families that are no longer in PANTHER. These need to be moved from the primary paint GAF directory in SVN to the "retired" subdirectory in SVN. Likewise in they need to be removed/retired from the data/trees/panther directory on SVN
 
 ## 3. Ensure taxonomic coverage
