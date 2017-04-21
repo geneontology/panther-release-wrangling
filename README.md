@@ -2,7 +2,9 @@
 
 ## 1. Get new data
 
-Using wget (see jenkins?), bring new data to geneontology/data/trees/panther SVN repository 
+Job: https://build.berkeleybop.org/job/panther-update
+
+Using wget, bring new data to geneontology/data/trees/panther SVN repository 
 Then svn commit
 
 We're currently using the following command:
